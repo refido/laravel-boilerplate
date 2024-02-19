@@ -55,6 +55,11 @@
                                 <label for="password_confirmation" class="d-block">Password Confirmation</label>
                                 <input id="password_confirmation" type="password" class="form-control"
                                     name="password_confirmation">
+                                @error('password_confirmation')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                         </div>
 

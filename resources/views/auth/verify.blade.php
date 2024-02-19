@@ -12,15 +12,17 @@
             <div class="card card-primary">
                 @if (session('status') == 'verification-link-sent')
                     <div class="card-header text-center">
-                        <h4>A new email verification link has been emailed to you!</h4>
+                        <h4>You've been sent a new email verification link!</h4>
                     </div>
                 @else
                     <div class="card-header text-center">
-                        <h4>Please check your email for confirmation.</h4>
+                        <h4>Please confirm by checking your email</h4>
                     </div>
                 @endif
-                
                 <div class="card-body">
+                    <p class="muted-text text-center">
+                        If you haven't received an email within 15 minutes, click the button below
+                    </p>
                     <form method="POST" action="{{ route('verification.send') }}" class="needs-validation" novalidate="">
                         @csrf
                         <div class="form-group">
