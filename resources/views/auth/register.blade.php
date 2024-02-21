@@ -53,7 +53,8 @@
                             </div>
                             <div class="form-group col-6">
                                 <label for="password_confirmation" class="d-block">Password Confirmation</label>
-                                <input id="password_confirmation" type="password" class="form-control"
+                                <input id="password_confirmation" type="password"
+                                    class="form-control  @error('password_confirmation') is-invalid @enderror"
                                     name="password_confirmation">
                                 @error('password_confirmation')
                                     <div class="invalid-feedback">

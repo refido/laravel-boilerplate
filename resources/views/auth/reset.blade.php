@@ -47,7 +47,8 @@
 
                         <div class="form-group">
                             <label for="password_confirmation">Password Confirmation</label>
-                            <input id="password_confirmation" type="password" class="form-control"
+                            <input id="password_confirmation" type="password"
+                                class="form-control  @error('password_confirmation') is-invalid @enderror"
                                 name="password_confirmation" tabindex="2">
                             @error('password_confirmation')
                                 <div class="invalid-feedback">

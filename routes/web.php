@@ -21,5 +21,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('home', function () {
         // dd(auth()->user());
         return view('dashboard.home');
-    })->name('home')->middleware('can:dashboard');
+    })->name('home');
+
+    Route::get('edit-profile', function () {
+        return view('dashboard.profile');
+    })->name('profile.edit');
+
+    Route::get('change-password', function () {
+        return view('dashboard.password');
+    })->name('password.edit');
 });
