@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +28,5 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('dashboard.profile');
     })->name('profile.edit');
 
-    Route::get('change-password', function () {
-        return view('dashboard.password');
-    })->name('password.edit');
+    Route::resource('user', UserController::class);
 });

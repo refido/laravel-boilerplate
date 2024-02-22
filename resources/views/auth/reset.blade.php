@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                value="{{ request()->email }}" name="email" tabindex="1" autofocus>
+                                value="{{ old('email', request()->email) }}" name="email" tabindex="1" autofocus>
                             @error('email')
                                 <div class="invalid-feedback">
                                     {{ $message }}

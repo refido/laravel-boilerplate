@@ -26,7 +26,7 @@
                     <form method="POST" action="{{ route('verification.send') }}" class="needs-validation" novalidate="">
                         @csrf
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                            <button id="resendButton" type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4" disabled>
                                 Resend Email Verification
                             </button>
                         </div>
@@ -38,4 +38,10 @@
             </div>
         </div>
     </div>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById('resendButton').disabled = false;
+        }, 900000); // 15 minutes in milliseconds
+    </script>
 @endsection

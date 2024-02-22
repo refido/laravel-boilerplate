@@ -12,7 +12,14 @@ class AuthServiceProvider extends ServiceProvider
      * This class represents the AuthServiceProvider which provides permissions for different user roles.
      */
     public static $permission = [
-        'dashboard' => ['admin'],
+        // User management
+        'index-user' => ['admin'],
+        'create-user' => ['admin'],
+        'store-user' => ['admin'],
+        'show-user' => ['admin'],
+        'edit-user' => ['admin'],
+        'update-user' => ['admin'],
+        'destroy-user' => ['admin'],
     ];
 
     /**
